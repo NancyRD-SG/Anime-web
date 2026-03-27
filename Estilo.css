@@ -1,0 +1,21 @@
+header img {
+width: 200px;
+height: 120px;
+object-fit: cover;
+margin: 5px;
+border: 2px solid rgb(14, 13, 13);
+}
+.banner
+{
+background-color: black;
+text-align: center;
+padding: 20px;
+}
+.banner img {
+width: 200px;
+height: 120px;
+object-fit: cover;
+margin: 5px;
+border: 2px solid rgb(238, 220, 59);
+}
+
