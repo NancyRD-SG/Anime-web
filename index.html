@@ -3,18 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilo.css">
-    <title>Animeword</title>
+    <link rel="stylesheet" href="Estilo.css"><!--Conectar con el archivo css-->
+    <title>Animeword</title> <!--Titulo del proyecto-->
    
 
 </head>
 <body>
-   <header class="banner">
-    <img src="img/Saint seiya omega.jfif" alt="saint seiya omega  2012",>
+
+    <nav class="menu-navegacion"> <!--barra de navegacion -->
+        <div class="logo"> <!--logo-->
+            <h1>Anime <span>Word</span></h1>
+
+        </div>
+
+        <div class="Buscar"><!--Para la funcion de buscar el anime -->
+            <input type="text" placeholder="Buscar Anime"> 
+            <button type="submit">🔍</button>
+
+        </div>
+        <!--Permitir la interaccion de pagina entre pagina -->
+        <ul class="Enlaces">
+            <li><a href="#">Inicio</a></li>
+             <li><a href="#">Directorio</a></li>
+              <li><a href="#">Crear</a></li>
+               <li><a href="#">Actualizar</a></li>
+             <li><a href="#">Eliminar</a></li>
+        </ul>
+    </nav>
+
+    <!--El banner interactivo -->
+   <header class="banner">  
+    <div class="tarjeta-anime"><!--Se puso el mismo nombre a todas las imagenes de anime para que al momento dedarle estilo fuera una sola estructura para todas -->
+    <img src="img/Saint seiya omega.jfif" alt="Saint seiya omega  2012",><!-- para ver la imagen -->
+    <div class="descripcion"><!--ver la descripcion de cada anime -->
+        <h3>Saint seiya omega  2012</h3>
+        <p>Saint Seiya Omega: ¡Revive la emoción de la saga clásica con 
+           nuevas aventuras! Sigue a Koga y sus amigos, jóvenes Caballeros
+           de Bronce, mientras luchan contra poderosas fuerzas del mal. 
+           Con temas de heroísmo y sacrificio, esta serie mezcla acción,
+           amistad y mitología, capturando la esencia que hace de Saint
+           Seiya un clásico atemporal. ¡Prepárate para batallas épicas 
+           y un viaje inolvidable!.</p>
+           <button class="bttonver">Ver Ahora</button>
+    </div>
+    </div>
+    <div class="tarjeta-anime">
     <img src="img/bakuten.jfif" alt="bakuten 2021">
+    <div class="descripcion">
+        <h3>bakuten 2021</h3>
+        <p>Bakuten!!: ¡Sumérgete en el apasionante mundo de la gimnasia rítmica! 
+           Acompaña a Shōta Aoi, un joven decidido a brillar en el tatami, 
+           mientras forma un equipo con amigos únicos y enfrenta desafíos
+           que pondrán a prueba su espíritu y su amistad</p>
+           <button class="bttonver">Ver Ahora</button>
+    </div>
+    </div>
+<div class="tarjeta-anime">
     <img src="img/Naruto.jfif" alt="Naruto 2002">
-    <img src="img/super campeones.jfif" alt="Supercampeones">
+    <div class="descripcion">
+        <h3>Naruto 2002</h3>
+        <p>Naruto: ¡Únete a la aventura de Naruto Uzumaki, 
+           un ninja rebelde con un gran sueño! A pesar de
+           ser rechazado por su aldea, lucha con valentía
+           para convertirse en Hokage y demostrar que los 
+           verdaderos héroes nunca se rinden. ¡Acción, 
+           amistad y poder en cada batalla!</p>
+           <button class="bttonver">Ver Ahora</button>
+    </div>
+    </div>
+    <div class="tarjeta-anime">
+     <img src="img/super campeones.jfif" alt="Supercampeones">
+    <div class="descripcion">
+        <h3>Supercampeones</h3>
+        <p>Supercampeones: ¡Vive la emoción del fútbol 
+           con Tsubasa Ozora! Un joven prodigio que
+           persigue su sueño de ser el mejor jugador 
+           del mundo. Con cada partido, enfrenta rivales
+           feroces y forja amistades inquebrantables en
+           su camino hacia la gloria. ¡El fútbol nunca
+           fue tan emocionante!</p>
+           <button class="bttonver">Ver Ahora</button>
+    </div>
+    </div>
     </header>
 </body>
-<script src="Motor.js"></script>
+<script src="Motor.js"></script><!--Conectar el index con el archivo de  JavaScript -->
 </html>

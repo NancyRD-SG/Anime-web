@@ -1,21 +1,155 @@
+/* ============================================================
+   5. CONFIGURACIÓN DE IMÁGENES (HEADER Y BANNER)
+   ============================================================ */
+
+/* Estilo para las imágenes que están dentro de la etiqueta <header> */
 header img {
-width: 200px;
-height: 120px;
-object-fit: cover;
-margin: 5px;
-border: 2px solid rgb(14, 13, 13);
-}
-.banner
-{
-background-color: black;
-text-align: center;
-padding: 20px;
-}
-.banner img {
-width: 200px;
-height: 120px;
-object-fit: cover;
-margin: 5px;
-border: 2px solid rgb(238, 220, 59);
+    width: 200px; /* Ancho fijo de la imagen */
+    height: 120px; /* Alto fijo para que todas se vean iguales */
+    object-fit: cover; /* Recorta la imagen para que llene el cuadro sin estirarse */
+    margin: 5px; /* Espacio por fuera de la imagen */
+    border: 2px solid rgb(14, 13, 13); /* Borde casi negro (muy oscuro) */
 }
 
+/* Estilo específico para las imágenes dentro del contenedor .banner */
+.banner img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    margin: 5px;
+    border: 2px solid rgb(238, 220, 59); /* Borde AMARILLO para que resalten */
+}
+/* ============================================================
+   1. BARRA DE NAVEGACIÓN (MENÚ SUPERIOR)
+   ============================================================ */
+
+.menu-navegacion {
+    display: flex; /* Alinea el logo, buscador y links en una fila */
+    justify-content: space-between; /* Empuja el logo a la izquierda y el menú a la derecha */
+    align-items: center; /* Centra todos los elementos verticalmente */
+    background-color: #1a1a1a; /* Gris muy oscuro casi negro */
+    padding: 10px 40px; /* Espacio interno para que no pegue a los bordes */
+    border-bottom: 3px solid yellow; /* Línea decorativa amarilla abajo */
+}
+
+/* Estilo del nombre de la página (Anime Word) */
+.logo h1 {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Para que la palabra 'Word' sea de color amarillo */
+.logo span {
+    color: yellow;
+}
+
+/* Configuración de la lista de enlaces (Inicio, Directorio, etc.) */
+.Enlaces {
+    display: flex; /* Pone los links uno al lado del otro */
+    list-style: none; /* Quita los puntitos de la lista */
+    gap: 20px; /* Espacio entre cada botón del menú */
+}
+
+/* Estilo de los textos de los links */
+.Enlaces a {
+    color: white;
+    text-decoration: none; /* Quita la línea de subrayado */
+    font-weight: bold;
+    transition: 0.3s; /* Hace que el cambio de color sea suave */
+}
+
+/* Color que aparece cuando pasas el mouse por encima de un link */
+.Enlaces a:hover {
+    color: yellow;
+}
+
+/* ============================================================
+   2. BUSCADOR (CAMPO DE ENTRADA)
+   ============================================================ */
+
+.Buscar {
+    display: flex;
+    background: white; /* Fondo blanco para que resalte del menú oscuro */
+    border-radius: 20px; /* Bordes redondeados para que se vea moderno */
+    padding: 5px 15px;
+}
+
+/* La parte donde el usuario escribe */
+.Buscar input {
+    border: none; /* Quita el borde aburrido por defecto */
+    outline: none; /* Quita la línea azul al hacer clic */
+    padding: 5px;
+}
+
+/* El botón de la lupita */
+.Buscar button {
+    background: none;
+    border: none;
+    cursor: pointer; /* Cambia la flecha del mouse por una manito */
+}
+
+/* ============================================================
+   3. BANNER PRINCIPAL (CONTENEDOR DE ANIMES)
+   ============================================================ */
+
+.banner {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben en una fila, los baja a la siguiente */
+    justify-content: center; /* Centra las tarjetas en la pantalla */
+    gap: 20px; /* Separación entre cada tarjeta de anime */
+    background-color: black;
+    padding: 50px 20px;
+}
+
+/* ============================================================
+   4. TARJETAS DE ANIME (CUADROS CON IMAGEN Y TEXTO)
+   ============================================================ */
+
+.tarjeta-anime {
+    position: relative; /* Necesario para que la descripción se pegue encima */
+    width: 250px;
+    height: 300px;
+    border: 2px solid yellow;
+    border-radius: 12px;
+    overflow: hidden; /* Corta la descripción si intenta salirse del cuadro */
+}
+
+/* Ajuste de la imagen dentro de la tarjeta */
+.tarjeta-anime img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se estire o se vea flaca */
+}
+
+/* CUADRO NEGRO CON EL TEXTO (Se oculta al principio) */
+.descripcion {
+    position: absolute; /* Se pega encima de la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Negro con transparencia (75%) */
+    color: white;
+    transition: 0.5s; /* Tiempo que tarda en aparecer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding no agrande el cuadro */
+    opacity: 0; /* Lo hace invisible al cargar la página */
+}
+
+/* LA MAGIA: Cuando el mouse toca la tarjeta, la descripción aparece */
+.tarjeta-anime:hover .descripcion {
+    opacity: 1;
+}
+
+/* Estilo de la letra pequeña del resumen */
+.descripcion p {
+    font-size: 12px;
+    line-height: 1.4;
+}
